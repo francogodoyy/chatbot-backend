@@ -7,8 +7,8 @@ dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.use(cors()); // Habilita CORS para permitir solicitudes desde el frontend
-  await app.listen(3000);
-  console.log('Servidor corriendo en http://localhost:3000');
+  app.enableCors();
+  const PORT = process.env.PORT || 3000;
+  await app.listen(PORT, () => console.log(`🚀 Backend corriendo en el puerto ${PORT}`));
 }
 bootstrap();
