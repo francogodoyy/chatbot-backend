@@ -8,6 +8,6 @@ export class ChatbotController {
   @Post('ask')
   async ask(@Body('message') message: string) {
     const response = await this.chatbotService.getResponse(message);
-    return { response };
+    return { response };    
   }
 }
