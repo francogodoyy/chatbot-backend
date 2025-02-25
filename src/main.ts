@@ -10,7 +10,7 @@ async function bootstrap() {
   );
 
   await app.register(cors, {
-    origin: ["https://chatbot-frontend-production-a514.up.railway.app"], 
+    origin: ["https://chatbot-frontend.up.railway.app/"], 
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   });
